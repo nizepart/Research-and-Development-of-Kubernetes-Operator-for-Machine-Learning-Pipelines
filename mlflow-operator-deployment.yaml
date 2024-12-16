@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlflow-operator
+  namespace: mlflow-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mlflow-operator
+  template:
+    metadata:
+      labels:
+        app: mlflow-operator
+    spec:
+      serviceAccountName: mlflow-operator
+      containers:
+        - name: mlflow-operator
+          imagePullPolicy: Always
+          image: nizepart/mlflow-operator:latest
+          envFrom:
+            - secretRef:
+                name: mlflow-creds
