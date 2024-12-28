@@ -79,6 +79,8 @@ Includes:
 4. **Traffic Gradual Shifting:**
    Shifts traffic incrementally from the previous to the new model based on Prometheus metrics, ensuring reliability.
 
+![mlflowSeldonOperator_full](https://github.com/user-attachments/assets/9674c5cc-d819-4592-aba4-23a5cd6771a5)
+
 ---
 
 ## Requirements
